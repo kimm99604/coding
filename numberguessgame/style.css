@@ -1,0 +1,104 @@
+@import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-family: 'galmuri9'; 
+    color: #FDEEDC;
+}
+body{
+    background-color: #DE922E;
+}
+img{
+   margin-bottom: 10px;
+   border-radius: 50px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 120px 0;
+    display: table;
+}
+.main{
+    text-align: center;
+    margin-bottom: 20px;
+}
+h1 {
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+#result__area {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+#chance__area {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+/* button */
+#playbutton {
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: 'galmuri9'; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    color: #333;
+    margin-left: 70px;
+}
+.w-btn-outline {
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: 'galmuri9'; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    background-color: #fff;
+}
+
+#playbutton:hover {
+    background:#FFD8A9;
+    outline: 0;
+}
+#resetbutton {
+    margin-left: 10px;
+    position: relative;
+    border: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: 'galmuri9'; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    color: #333;
+}
+#resetbutton:hover {
+    background:#FFD8A9;
+    outline: 0;
+}
+
+/* input css */
+.search__input {
+    display: block;
+    width: 300px;
+    padding: 12px 24px;
+    margin-left: 20px;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    color: #575756;
+    border-radius: 50px;
+    border: 1px solid #575756;
+    margin-bottom: 10px;
+
+}
+
