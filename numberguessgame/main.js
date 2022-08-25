@@ -27,7 +27,6 @@ function pickRandomNum(){
     computerNum = Math.floor(Math.random()*100)+1; //+1을 안하면 0-99까지만 나오기 때문
     console.log("정답", computerNum);
 }
-pickRandomNum();
 
 function play(){
     let Uservalue = UserInput.value
@@ -42,9 +41,10 @@ function play(){
     }
     
     chances --; //play버튼을 누를때마다 찬스가 1씩 줄어듦 
-    ChanceArea.textContent = `남은기회:${chances}`; //정적인값 동적인값 합칠때 백틱+${}
+    ChanceArea.textContent = `기회:${chances}`; //정적인값 동적인값 합칠때 백틱+${}
     // console.log("찬스:",chances)
-   
+    History.push(Uservalue); //사용자가 입력한 값 저장 
+    console.log(History)
 
     if(Uservalue < computerNum){
        ResultArea.textContent = "Up!!";
@@ -53,14 +53,13 @@ function play(){
        ResultArea.textContent = "Down!!";
     } else {
         ResultArea.textContent = "정답입니다!!";
-        playButton.disabled = true; //정답 맞추면 플레이버튼 disbled
+        Gameover = true; //정답 맞추면 플레이버튼 disbled
     }
 
-    History.push(Uservalue); //사용자가 입력한 값 저장 
-    console.log(History)
 
-    if(chances < 1){
+    if(chances == 0){
         GameOver = true;
+        ResultArea.textContent = "실패!!";
     }
 
     if(GameOver == true){
@@ -69,16 +68,17 @@ function play(){
 }
 
 function reset(){
+    pickRandomNum(); 
     //user input창이 깨끗하게 정리되고 히스토리 초기화됨 
     UserInput.value = '';
+    GameOver = false;
     History = []; 
     //기회가 다시 5번으로 됨
     chances = 5;
-    ResultArea.textContent = `남은 기회:${chances}`;
+    ChanceArea.textContent = `기회:${chances}`;
     //play버튼이 다시 활성화되고 새로운 번호가 생성됨 
-    pickRandomNum(); 
     ResultArea.textContent = "다시 시작합니다.";
     playButton.disabled = false;
 }
-
+pickRandomNum();
 
