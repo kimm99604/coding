@@ -1,5 +1,5 @@
 # coding
 
-https://kimm99604.github.io/cording/numberguessgame/index.html   
+https://kimm99604.github.io/coding/numberguessgame/index.html   
 
 
